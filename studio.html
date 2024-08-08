@@ -1,9 +1,3 @@
----
-layout: default
-title: "RHU Studio ㅣ 스튜디오"
-permalink: /studio/
----
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -74,11 +68,11 @@ permalink: /studio/
         }
         .modal-content {
             background-color: white;
-            margin: 15% auto;
+            margin: 10% auto; /* Adjusted top margin for vertical centering */
             padding: 20px;
             border-radius: 10px;
-            width: 60%;
-            max-width: 500px;
+            width: 90%; /* Increased width to 90% */
+            max-width: 800px; /* Increased max-width to accommodate larger content */
             text-align: center;
         }
         .close {
@@ -116,23 +110,17 @@ permalink: /studio/
         .container-lg > h1 {
             display: none;
         }
-        .description-section {
-            text-align: left;
-            white-space: pre-wrap; /* Preserve whitespace and newlines */
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>RHU Studio</h1>
-        <p>개발중인 게임 목록</p>
     </header>
 
     <nav>
-        <a href="rhu.kro.kr">홈</a>
-        <a href="rhu.kro.kr/studio">게임</a>
-        <a href="#about">소개</a>
-        <a href="#contact">문의하기</a>
+        <a href="index.html">홈</a>
+        <a href="studio.html">스튜디오</a>
+        <a href="about.html">소개</a>
     </nav>
 
     <div class="container">
@@ -152,7 +140,7 @@ permalink: /studio/
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle"></h2>
             <img id="modalImage" src="" alt="Game Image">
-            <div id="modalDescription" class="description-section"></div>
+            <p id="modalDescription"></p>
             <div class="modal-buttons">
                 <a id="modalLink1" href="#" target="_blank">링크 1</a>
                 <a id="modalLink2" href="#" target="_blank">링크 2</a>
@@ -184,7 +172,7 @@ Main Scripter/Road Builder : genge4068`,
                     { url: "https://discord.com/invite/VrwCfeQbaD", text: "디스코드 링크" },
                     { url: "https://www.roblox.com/ko/groups/16040719/RHU-Studio#!/about", text: "로블록스 그룹" }
                 ]
-            }
+            },
             // Add other game details here...
         };
 
@@ -200,7 +188,7 @@ Main Scripter/Road Builder : genge4068`,
             const game = gameDetails[gameId];
 
             title.textContent = game.title;
-            description.textContent = game.description; // Preserve new lines and spacing
+            description.textContent = game.description;
             image.src = game.image;
             link1.href = game.links[0].url;
             link1.textContent = game.links[0].text;
