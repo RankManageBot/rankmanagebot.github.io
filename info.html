@@ -90,6 +90,10 @@ permalink: /studio/
         .close:hover {
             color: #000;
         }
+        /* 특정 클래스 안의 <h1> 태그 숨기기 */
+        .container-lg > h1 {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -97,14 +101,14 @@ permalink: /studio/
         <h1>로블록스 게임 스튜디오</h1>
         <p>개발중인 게임 목록</p>
     </header>
-    
+
     <nav>
         <a href="#home">홈</a>
         <a href="#games">게임</a>
         <a href="#about">소개</a>
         <a href="#contact">문의하기</a>
     </nav>
-    
+
     <div class="container">
         <div class="game-grid">
             <div class="game-item" onclick="openModal('game1')">게임 1</div>
@@ -138,10 +142,10 @@ permalink: /studio/
             const modal = document.getElementById("gameModal");
             const title = document.getElementById("modalTitle");
             const description = document.getElementById("modalDescription");
-            
+
             title.textContent = gameDetails[gameId].title;
             description.textContent = gameDetails[gameId].description;
-            
+
             modal.style.display = "block";
         }
 
