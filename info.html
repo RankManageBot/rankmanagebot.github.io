@@ -79,6 +79,7 @@ permalink: /studio/
             border-radius: 10px;
             width: 60%;
             max-width: 500px;
+            text-align: center;
         }
         .close {
             color: #aaa;
@@ -89,6 +90,28 @@ permalink: /studio/
         }
         .close:hover {
             color: #000;
+        }
+        .modal img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .modal-buttons a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .modal-buttons a:hover {
+            background-color: #45a049;
         }
         /* 특정 클래스 안의 <h1> 태그 숨기기 */
         .container-lg > h1 {
@@ -124,27 +147,100 @@ permalink: /studio/
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Game Image">
             <p id="modalDescription"></p>
+            <div class="modal-buttons">
+                <a id="modalLink1" href="#" target="_blank">링크 1</a>
+                <a id="modalLink2" href="#" target="_blank">링크 2</a>
+                <a id="modalLink3" href="#" target="_blank">링크 3</a>
+            </div>
         </div>
     </div>
 
     <script>
         const gameDetails = {
-            game1: { title: "어드벤처 월드", description: "광활한 오픈월드에서 펼쳐지는 모험 게임입니다. 다양한 퀘스트와 숨겨진 보물을 찾아 여행을 떠나세요." },
-            game2: { title: "레이싱 매니아", description: "고속 레이싱의 스릴을 즐겨보세요. 다양한 트랙과 커스터마이징 가능한 차량들이 기다리고 있습니다." },
-            game3: { title: "퍼즐 마스터", description: "두뇌를 자극하는 다양한 퍼즐을 풀어보세요. 난이도별로 준비된 수백 개의 스테이지가 여러분을 기다립니다." },
-            game4: { title: "좀비 서바이벌", description: "좀비 아포칼립스 속에서 생존하세요. 자원을 모으고, 기지를 강화하고, 다른 생존자들과 협력하세요." },
-            game5: { title: "패션 디자이너", description: "나만의 패션 브랜드를 만들어보세요. 옷을 디자인하고, 패션쇼를 열고, 온라인 숍을 운영해보세요." },
-            game6: { title: "스페이스 콜로니", description: "우주에서 새로운 문명을 건설하세요. 자원을 관리하고, 기술을 연구하고, 외계 생명체와 교류하세요." }
+            game1: {
+                title: "어드벤처 월드",
+                description: "광활한 오픈월드에서 펼쳐지는 모험 게임입니다. 다양한 퀘스트와 숨겨진 보물을 찾아 여행을 떠나세요.",
+                image: "image1.jpg",
+                links: [
+                    { url: "http://link1.com", text: "링크 1" },
+                    { url: "http://link2.com", text: "링크 2" },
+                    { url: "http://link3.com", text: "링크 3" }
+                ]
+            },
+            game2: {
+                title: "레이싱 매니아",
+                description: "고속 레이싱의 스릴을 즐겨보세요. 다양한 트랙과 커스터마이징 가능한 차량들이 기다리고 있습니다.",
+                image: "image2.jpg",
+                links: [
+                    { url: "http://link1.com", text: "링크 1" },
+                    { url: "http://link2.com", text: "링크 2" },
+                    { url: "http://link3.com", text: "링크 3" }
+                ]
+            },
+            game3: {
+                title: "퍼즐 마스터",
+                description: "두뇌를 자극하는 다양한 퍼즐을 풀어보세요. 난이도별로 준비된 수백 개의 스테이지가 여러분을 기다립니다.",
+                image: "image3.jpg",
+                links: [
+                    { url: "http://link1.com", text: "링크 1" },
+                    { url: "http://link2.com", text: "링크 2" },
+                    { url: "http://link3.com", text: "링크 3" }
+                ]
+            },
+            game4: {
+                title: "좀비 서바이벌",
+                description: "좀비 아포칼립스 속에서 생존하세요. 자원을 모으고, 기지를 강화하고, 다른 생존자들과 협력하세요.",
+                image: "image4.jpg",
+                links: [
+                    { url: "http://link1.com", text: "링크 1" },
+                    { url: "http://link2.com", text: "링크 2" },
+                    { url: "http://link3.com", text: "링크 3" }
+                ]
+            },
+            game5: {
+                title: "패션 디자이너",
+                description: "나만의 패션 브랜드를 만들어보세요. 옷을 디자인하고, 패션쇼를 열고, 온라인 숍을 운영해보세요.",
+                image: "image5.jpg",
+                links: [
+                    { url: "http://link1.com", text: "링크 1" },
+                    { url: "http://link2.com", text: "링크 2" },
+                    { url: "http://link3.com", text: "링크 3" }
+                ]
+            },
+            game6: {
+                title: "스페이스 콜로니",
+                description: "우주에서 새로운 문명을 건설하세요. 자원을 관리하고, 기술을 연구하고, 외계 생명체와 교류하세요.",
+                image: "image6.jpg",
+                links: [
+                    { url: "http://link1.com", text: "링크 1" },
+                    { url: "http://link2.com", text: "링크 2" },
+                    { url: "http://link3.com", text: "링크 3" }
+                ]
+            }
         };
 
         function openModal(gameId) {
             const modal = document.getElementById("gameModal");
             const title = document.getElementById("modalTitle");
             const description = document.getElementById("modalDescription");
+            const image = document.getElementById("modalImage");
+            const link1 = document.getElementById("modalLink1");
+            const link2 = document.getElementById("modalLink2");
+            const link3 = document.getElementById("modalLink3");
 
-            title.textContent = gameDetails[gameId].title;
-            description.textContent = gameDetails[gameId].description;
+            const game = gameDetails[gameId];
+
+            title.textContent = game.title;
+            description.textContent = game.description;
+            image.src = game.image;
+            link1.href = game.links[0].url;
+            link1.textContent = game.links[0].text;
+            link2.href = game.links[1].url;
+            link2.textContent = game.links[1].text;
+            link3.href = game.links[2].url;
+            link3.textContent = game.links[2].text;
 
             modal.style.display = "block";
         }
