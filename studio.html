@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "RHU Studioㅣ스튜디오"
+title: "RHU Studio ㅣ 스튜디오"
 permalink: /studio/
 ---
 
@@ -116,6 +116,10 @@ permalink: /studio/
         .container-lg > h1 {
             display: none;
         }
+        .description-section {
+            text-align: left;
+            white-space: pre-wrap; /* Preserve whitespace and newlines */
+        }
     </style>
 </head>
 <body>
@@ -125,8 +129,8 @@ permalink: /studio/
     </header>
 
     <nav>
-        <a href="#home">홈</a>
-        <a href="#games">게임</a>
+        <a href="rhu.kro.kr">홈</a>
+        <a href="rhu.kro.kr/studio">게임</a>
         <a href="#about">소개</a>
         <a href="#contact">문의하기</a>
     </nav>
@@ -148,7 +152,7 @@ permalink: /studio/
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle"></h2>
             <img id="modalImage" src="" alt="Game Image">
-            <p id="modalDescription"></p>
+            <div id="modalDescription" class="description-section"></div>
             <div class="modal-buttons">
                 <a id="modalLink1" href="#" target="_blank">링크 1</a>
                 <a id="modalLink2" href="#" target="_blank">링크 2</a>
@@ -161,7 +165,8 @@ permalink: /studio/
         const gameDetails = {
             game1: {
                 title: "Drive Your Life",
-                description: `안녕하세요 RHU 스튜디오입니다.
+                description: `[🇰🇷 Information]
+안녕하세요 RHU 스튜디오입니다.
 저희가 새롭게 선보여드리는 게임, Drive Your Life는 여러 종류의 자동차, 오토바이, 자전거 등을 자유롭게 타고 다니는 게임입니다.
 또한, 슬롯을 통해 게임 안에서 여러분들이 제작 및 개조한 이동수단을 운전하실 수 있습니다.
 Drive Your Life를 통해 특별한 경험을 해보세요.
@@ -171,7 +176,7 @@ Drive Your Life를 통해 특별한 경험을 해보세요.
 
 [🛠 Developers]
 Producer/Dev Assistant : Gamsug_SoSo
-Main Developer/Main Builder : Astrochulsu 
+Main Developer/Main Builder : Astrochulsu
 Main Scripter/Road Builder : genge4068`,
                 image: "image1.jpg",
                 links: [
@@ -195,7 +200,7 @@ Main Scripter/Road Builder : genge4068`,
             const game = gameDetails[gameId];
 
             title.textContent = game.title;
-            description.textContent = game.description;
+            description.textContent = game.description; // Preserve new lines and spacing
             image.src = game.image;
             link1.href = game.links[0].url;
             link1.textContent = game.links[0].text;
