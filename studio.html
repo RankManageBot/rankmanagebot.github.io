@@ -141,12 +141,13 @@ permalink: /studio/
         </div>
     </div>
 
+    <!-- Modal Content HTML 부분 -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle"></h2>
             <img id="modalImage" src="" alt="Game Image">
-            <p id="modalDescription"></p>
+            <p id="modalDescription" style="white-space: pre-wrap;"></p>
             <div class="modal-buttons">
                 <a id="modalLink1" href="#" target="_blank">링크 1</a>
                 <a id="modalLink2" href="#" target="_blank">링크 2</a>
@@ -154,6 +155,7 @@ permalink: /studio/
             </div>
         </div>
     </div>
+
 
     <script>
         const gameDetails = {
@@ -177,8 +179,8 @@ Main Scripter/Road Builder : genge4068`,
                     { url: "https://rhu.kro.kr", text: "게임링크(준비중)" },
                     { url: "https://discord.com/invite/VrwCfeQbaD", text: "디스코드 링크" },
                     { url: "https://www.roblox.com/ko/groups/16040719/RHU-Studio#!/about", text: "로블록스 그룹" }
-                ]
-            },
+              ]
+        }
             // Add other game details here...
         };
 
