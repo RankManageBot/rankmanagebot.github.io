@@ -9,7 +9,7 @@ permalink: /studio/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로블록스 게임 스튜디오</title>
+    <title>RHU Studio | 스튜디오</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -113,15 +113,11 @@ permalink: /studio/
         .modal-buttons a:hover {
             background-color: #45a049;
         }
-        /* 특정 클래스 안의 <h1> 태그 숨기기 */
-        .container-lg > h1 {
-            display: none;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>로블록스 게임 스튜디오</h1>
+        <h1>RHU Studio</h1>
         <p>개발중인 게임 목록</p>
     </header>
 
@@ -134,12 +130,13 @@ permalink: /studio/
 
     <div class="container">
         <div class="game-grid">
-            <div class="game-item" onclick="openModal('game1')">Drive Your Lifke</div>
-            /*<div class="game-item" onclick="openModal('game2')">게임 2</div>*/
-            /*<div class="game-item" onclick="openModal('game3')">게임 3</div>*/
-            /*<div class="game-item" onclick="openModal('game4')">게임 4</div>*/
-            /*<div class="game-item" onclick="openModal('game5')">게임 5</div>*/
-            /*<div class="game-item" onclick="openModal('game6')">게임 6</div>*/
+            <div class="game-item" onclick="openModal('game1')">Drive Your Life</div>
+            <!-- Uncomment the lines below to add more games -->
+            <!-- <div class="game-item" onclick="openModal('game2')">게임 2</div> -->
+            <!-- <div class="game-item" onclick="openModal('game3')">게임 3</div> -->
+            <!-- <div class="game-item" onclick="openModal('game4')">게임 4</div> -->
+            <!-- <div class="game-item" onclick="openModal('game5')">게임 5</div> -->
+            <!-- <div class="game-item" onclick="openModal('game6')">게임 6</div> -->
         </div>
     </div>
 
@@ -160,8 +157,8 @@ permalink: /studio/
     <script>
         const gameDetails = {
             game1: {
-                title: "Drive Your LIfe",
-                description: "[🇰🇷 Information]
+                title: "Drive Your Life",
+                description: `[🇰🇷 Information]
 안녕하세요 RHU 스튜디오입니다.
 저희가 새롭게 선보여드리는 게임, Drive Your Life는 여러 종류의 자동차, 오토바이, 자전거 등을 자유롭게 타고 다니는 게임입니다.
 또한, 슬롯을 통해 게임 안에서 여러분들이 제작 및 개조한 이동수단을 운전하실 수 있습니다.
@@ -173,7 +170,7 @@ Drive Your Life를 통해 특별한 경험을 해보세요.
 [🛠 Developers]
 Producer/Dev Assistant : Gamsug_SoSo
 Main Developer/Main Builder : Astrochulsu 
-Main Scripter/Road Builder : genge4068",
+Main Scripter/Road Builder : genge4068`,
                 image: "image1.jpg",
                 links: [
                     { url: "https://rhu.kro.kr", text: "게임링크(준비중)" },
@@ -181,56 +178,7 @@ Main Scripter/Road Builder : genge4068",
                     { url: "https://www.roblox.com/ko/groups/16040719/RHU-Studio#!/about", text: "로블록스 그룹" }
                 ]
             },
-            game2: {
-                title: "레이싱 매니아",
-                description: "고속 레이싱의 스릴을 즐겨보세요. 다양한 트랙과 커스터마이징 가능한 차량들이 기다리고 있습니다.",
-                image: "image2.jpg",
-                links: [
-                    { url: "http://link1.com", text: "링크 1" },
-                    { url: "http://link2.com", text: "링크 2" },
-                    { url: "http://link3.com", text: "링크 3" }
-                ]
-            },
-            game3: {
-                title: "퍼즐 마스터",
-                description: "두뇌를 자극하는 다양한 퍼즐을 풀어보세요. 난이도별로 준비된 수백 개의 스테이지가 여러분을 기다립니다.",
-                image: "image3.jpg",
-                links: [
-                    { url: "http://link1.com", text: "링크 1" },
-                    { url: "http://link2.com", text: "링크 2" },
-                    { url: "http://link3.com", text: "링크 3" }
-                ]
-            },
-            game4: {
-                title: "좀비 서바이벌",
-                description: "좀비 아포칼립스 속에서 생존하세요. 자원을 모으고, 기지를 강화하고, 다른 생존자들과 협력하세요.",
-                image: "image4.jpg",
-                links: [
-                    { url: "http://link1.com", text: "링크 1" },
-                    { url: "http://link2.com", text: "링크 2" },
-                    { url: "http://link3.com", text: "링크 3" }
-                ]
-            },
-            game5: {
-                title: "패션 디자이너",
-                description: "나만의 패션 브랜드를 만들어보세요. 옷을 디자인하고, 패션쇼를 열고, 온라인 숍을 운영해보세요.",
-                image: "image5.jpg",
-                links: [
-                    { url: "http://link1.com", text: "링크 1" },
-                    { url: "http://link2.com", text: "링크 2" },
-                    { url: "http://link3.com", text: "링크 3" }
-                ]
-            },
-            game6: {
-                title: "스페이스 콜로니",
-                description: "우주에서 새로운 문명을 건설하세요. 자원을 관리하고, 기술을 연구하고, 외계 생명체와 교류하세요.",
-                image: "image6.jpg",
-                links: [
-                    { url: "http://link1.com", text: "링크 1" },
-                    { url: "http://link2.com", text: "링크 2" },
-                    { url: "http://link3.com", text: "링크 3" }
-                ]
-            }
+            // Add other game details here...
         };
 
         function openModal(gameId) {
