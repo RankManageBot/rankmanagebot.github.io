@@ -26,24 +26,43 @@ permalink: /studio/
             padding: 1rem;
         }
         nav {
-            background-color: #34495e;
-            padding: 10px;
-            text-align: center;
+            background-color: #3b4a6e; /* 약간 연한 색상으로 변경 */
+            color: white;
+            text-align: left; /* 왼쪽 정렬 */
+            padding: 10px 20px; /* 좌우 패딩 추가 */
+            position: fixed; /* 페이지 상단에 고정 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 가로 전체를 채움 */
+            z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px;
-            margin: 0 5px;
+            padding: 10px 15px; /* 패딩 조정 */
+            display: inline-block;
         }
         nav a:hover {
-            background-color: #465c71;
+            background-color: #4a5a8c;
+            border-radius: 5px; /* 호버 시 배경색과 테두리 둥글게 설정 */
+        }
+        .site-title {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        .site-title img {
+            height: 30px; /* 사진의 높이 조정 */
+            margin-right: 10px; /* 사진과 제목 사이의 간격 */
         }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
+            padding-top: 60px; /* 네비게이션 바 높이만큼 패딩 추가 */
         }
         .game-grid {
             display: grid;
@@ -77,8 +96,8 @@ permalink: /studio/
             margin: 15% auto;
             padding: 20px;
             border-radius: 10px;
-            width: 80%; /* Increase the width to 80% */
-            max-width: 700px;
+            width: 70%; /* 가로폭을 70%로 조정 */
+            max-width: 600px; /* 최대 너비 조정 */
             text-align: center;
         }
         .close {
@@ -113,19 +132,14 @@ permalink: /studio/
         .modal-buttons a:hover {
             background-color: #45a049;
         }
-        .container-lg > h1 {
-            display: none;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>RHU Studio</h1>
-        <p>개발중인 게임 목록</p>
-    </header>
-
     <nav>
-        <a href="/">홈</a>
+        <a href="/" class="site-title">
+            <img src="logo.png" alt="Site Logo"> <!-- 사이트 제목 옆에 사진 추가 -->
+            RHU Studio
+        </a>
         <a href="/studio">스튜디오</a>
         <a href="/about">소개</a>
     </nav>
