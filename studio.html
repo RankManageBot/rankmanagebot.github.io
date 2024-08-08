@@ -11,6 +11,19 @@ permalink: /studio/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RHU Studioㅣㅣ스튜디오</title>
     <style>
+       ---
+layout: default
+title: "RHU Studioㅣ홈"
+permalink: /
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 | RHU Studio</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -18,12 +31,6 @@ permalink: /studio/
             padding: 0;
             color: #333;
             background-color: #f4f4f4;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
         }
         nav {
             background-color: #3b4a6e; /* 약간 연한 색상으로 변경 */
@@ -36,20 +43,24 @@ permalink: /studio/
             width: 100%; /* 가로 전체를 채움 */
             z-index: 1000; /* 다른 콘텐츠 위에 표시되도록 */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 추가 */
+            display: flex;
+            align-items: center; /* 수직 가운데 정렬 */
+            height: 60px; /* 네비게이션 바 높이 */
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px 15px; /* 패딩 조정 */
-            display: inline-block;
+            display: inline-flex;
+            align-items: center; /* 수직 가운데 정렬 */
         }
         nav a:hover {
             background-color: #4a5a8c;
             border-radius: 5px; /* 호버 시 배경색과 테두리 둥글게 설정 */
         }
         .site-title {
-            display: inline-flex;
-            align-items: center;
+            display: flex;
+            align-items: center; /* 사이트 제목과 이미지 수직 정렬 */
             text-decoration: none;
             color: white;
         }
@@ -62,8 +73,26 @@ permalink: /studio/
             margin: auto;
             overflow: hidden;
             padding: 20px;
-            padding-top: 60px; /* 네비게이션 바 높이만큼 패딩 추가 */
+            padding-top: 80px; /* 네비게이션 바 높이만큼 패딩 추가 */
         }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="site-title">
+            <img src="logo.png" alt="Site Logo"> <!-- 사이트 제목 옆에 사진 추가 -->
+            RHU Studio
+        </a>
+        <a href="/studio">게임</a>
+        <a href="/about">소개</a>
+    </nav>
+
+    <div class="container">
+        <p>여기는 홈 페이지입니다.</p>
+    </div>
+</body>
+</html>
+
         .game-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
