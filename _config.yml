@@ -1,29 +1,9 @@
 # _config.yml
 
-title: "RHU Studio"  # 사이트의 기본 제목
-description: "RHU Studio 공식 웹사이트입니다."  # 사이트 설명 (SEO와 메타 태그에 사용)
-author: "내 사용자이름"  # 작성자 이름
+title: ""  # 사이트의 기본 제목
 
 # URL 설정
 permalink: /:title/
-baseurl: "" # 사이트가 루트 경로에 위치하는 경우 비워둡니다.
-url: "https://yourwebsite.com" # 웹사이트의 도메인 이름
 
 # 마크다운 설정
 markdown: kramdown
-
-# SEO 플러그인 사용 (선택 사항)
-plugins:
-  - jekyll-seo-tag
-
-# 페이지 제목 포맷 설정
-defaults:
-  - scope:
-      path: "" # 모든 페이지에 적용
-    values:
-      title: "RHU Studio"  # 기본 제목
-      description: "RHU Studio 공식 웹사이트입니다."  # 기본 설명
-      layout: "default"  # 기본 레이아웃
-      seo:
-        title: "RHU Studio"
-        description: "RHU Studio에서 다양한 로블록스 게임을 만나보세요."
