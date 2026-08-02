@@ -1,2 +1,0 @@
-# rankmanagebot.github.io
-d
